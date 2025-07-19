@@ -316,13 +316,30 @@ main {
   color: green;
 }
 
-@media (max-width: 700px) {
-  .rivals,
-  .posing,
-  .together,
-  .sleep,
-  .match {
-    width: 90%;
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .movement {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .index-position,
+  .register-position,
+  .statistics-position {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
   }
 
   .both-lists {
@@ -330,4 +347,31 @@ main {
     align-items: center;
     gap: 2rem;
   }
+
+  .posing,
+  .together,
+  .rivals,
+  .match,
+  .video iframe {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .information label {
+    text-align: left;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .information input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-buttons {
+    margin-left: 0;
+    justify-content: center;
+  }
 }
+
