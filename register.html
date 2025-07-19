@@ -3,24 +3,61 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./styles.css" rel="stylesheet">
+        <link href="./CSS/styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
         <title> Lionel Musti | Register </title>
     </head>
     <body>
         <header>
             <div>
-                <img src="./logo.png" alt="Logo of a dog playing with a football." class="logo">
+                <a href="./index.html"><img src="./images/logo.png" alt="Logo of a dog playing with a football." class="logo"></a>
             </div>
             <div class="movement">
                 <nav>
-                    <a href="./index.html">Homepage</a>
-                    <a href="./register.html">Register</a>
-                    <a href="./statistics.html">Statistics</a>
+                    <a class="index-position" href="./index.html">Homepage</a>
+                    <a class="register-position" href="./register.html">Register</a>
+                    <a class="statistics-position" href="./statistics.html">Statistics</a>
                 </nav>
             </div>
         </header>
         <main>   
-            <h1>You made it to register</h1>
+            <form class="information" id="register-form">
+                <fieldset>
+                    <legend>Become a Fan</legend>
+                    <div class="form-row">
+                        <label for="fname">First Name:</label>
+                        <input type="text" id="fname" name="fname" pattern="[A-Za-z]+" required placeholder="Letters only"> 
+                    </div>
+                    <div class="form-row">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" pattern="[A-Za-z]+" required placeholder="Letters only">
+                    </div>    
+                    <div class="form-row"> 
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="Email address">
+                    </div>
+                    <div class="form-row"> 
+                        <label for="mobile">Mobile:</label>
+                        <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" maxlength="10" minlength="10" required placeholder="Ten digit number">
+                    </div>
+                    <div class="form-row"> 
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" minlength="6" maxlength="12" required placeholder="Must be between 6 and 12 characters">
+                    </div>
+                    <div class="form-row"> 
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" minlength="6" maxlength="12" required placeholder="Re-enter password">
+                        
+                    </div>
+                    <p id="form-message"></p> 
+                    <div class="form-buttons">
+                        <input type="submit" value="Submit">
+                        <input type="reset" id="reset-button" value="Reset">
+                    </div>
+                </fieldset>
+            </form>
+
+            <img src="./images/sleep.JPG" alt="dog sleeping cutely" class="sleep">
         </main>
         <footer>
             <div>
@@ -29,5 +66,6 @@
             
 
         </footer>
+        <script src="./script.js"></script>
     </body>
 </html>
